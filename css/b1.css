@@ -1,0 +1,48 @@
+.anh-bia {
+    height: 270px;
+    width: 100%;
+    border-radius: 5px 0px 0px 0px;
+    margin-bottom: -8px;
+}
+.container {
+    width: 1100px;
+    background-color: pink;
+    margin: auto;
+}
+.ttin {
+    display: flex;
+}
+.ttin-left {
+   width: 45%;
+}
+.ttin-left ul {
+    display: flex;
+    font-size: 14px;
+}
+.ttin-left ul li {
+    display: flex;
+}
+.ttin-left img {
+    margin: 0px 5px 0 -40px;
+}
+li.thong-tin{
+    padding: 5px 10px;
+    border-left: 2px solid rgb(204, 201, 201);
+    color: #828282;
+}
+.ttin-right{
+    width: 55%;
+}
+.ttin-right ul{
+    display: flex;
+    font-size: 14px;
+    margin-left: 90px;
+}
+.ttin-right ul li{
+    display: flex;
+    padding: 5px;
+    color: #828282;
+}
+.ttin-right ul li:hover{
+    color: black;
+}
