@@ -40,10 +40,31 @@ li{
 header{
     border-bottom: 10px solid #f1f1f2;
 }
+.tintuc{
+    border-bottom: 1px solid #f1f1f2;
+}
 .ttin{
-    color:blue;
     display:flex;
     justify-content: center;
-    gap: 20px;
+    margin: 10px, 10px, 10px,10px;
 }
+.ttin .ttin1 ul {
+   display: block;
+}
+.tbao1 {
+    display: flex;
+}
+.vanban1 {
+    display: inline;
+}
+footer{
+    background: blue;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+
+
+
 
