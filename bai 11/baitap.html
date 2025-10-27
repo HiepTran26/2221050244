@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tính Điểm Chữ</h1>
+    <h2>Biết tổng A*0.6 + B*0.3 + C*0.1</h2>
+    <div>
+      <p>Nhập điểm A</p>
+      <input type="number" id="soThuNhat" />
+    </div>
+    <div>
+      <p>Nhập điểm B</p>
+      <input type="number" id="soThuHai" />
+    </div>
+    <div>
+      <p>Nhập điểm C</p>
+      <input type="number" id="soThuBa" />
+    </div>
+    <div>
+      <button onclick="tinhDiem">Tính Điểm</button>
+    </div>
+    Kết Quả: <input type="number" id="ketQua" class="ketQua" />
+    <script>
+      function tinhDiem() {
+        let soThuNhat = parseFloat(document.getElementById("soThuNhat").value);
+        let soThuHai = parseFloat(document.getElementById("soThuHai").value);
+        let soThuBa = parseFloat(document.getElementById("soThuBa").value);
+        let diemTong = soThuNhat * 0.6 + soThuHai * 0.3 + soThuBa * 0.1;
+        let ketQua = (document.getElementById("ketQua").value = diemTong);
+      }
+    </script>
+  </body>
+</html>
