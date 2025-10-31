@@ -1,60 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bài kiểm tra buổi 7</title>
-    </head>
-    <body>
-        <script>
-            const orderInfo = {
-                idOrder: "1",
-                guestInfo: {
-                    name: "Tran Van Hiep",
-                    phoneNumber: "0364941826",
-                    regular: true,
-                },
-                listProducts: [
-                    {
-                        id: "coffee",
-                        name: "cà phê",
-                        quantity: 10,
-                        prices: 10000,
-                    },
-                    {
-                        id: "matCha",
-                        name: "matCha",
-                        quantity: 20,
-                        prices: 20000,
-                    },
-                    {
-                        id: "traSua",
-                        name: "trà sữa",
-                        quantity: 30,
-                        prices: 30000,
-                    },
-                ],
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ví dụ về thay đổi chế độ</h1>
+      <img class="anh" width="100px" src="../images/chopug.jpg" alt="" />
+      <h1>Chế độ sáng</h1>
+      <button onclick="doiCheDo()">Thay đổi chế độ</button>
+    </div>
+    <script>
+      let cheDo = true;
 
-                statusPay: true,
-                address: "Đan Phượng - Hà Nội",
-            };
-
-            const sumPrices = orderInfo.listProducts.map(
-                (product) => product.quantity * product.prices
-            );
-
-            const sumPriceOrder = sumPrices.reduce(
-                (sum, product) => sum + product,
-                0
-            );
-
-            document.writeln("Tổng tiền: " + sumPriceOrder + "<br>");
-
-            //String
-            const name = "Tran Van Hiep";
-            document.writeln(name.length);
-
-            //includes
-        </script>
-    </body>
+      function doiCheDo() {
+        if (cheDo == true) {
+          document.getElementsByTagName("body")[0].style =
+            "background-color: black";
+          document.getElementsByTagName("h1")[0].style = "color: white";
+          document.getElementsByTagName("h1")[1].innerHTML = "Chế độ tối";
+          document.getElementsByTagName("h1")[1].style = "color: white";
+          document.getElementsByClassName("anh")[0].src =
+            "../images/logofb.jpg";
+          cheDo = false;
+        } else {
+          document.getElementsByTagName("body")[0].style =
+            "background-color: white";
+          document.getElementsByTagName("h1")[0].style = "color: black";
+          document.getElementsByTagName("h1")[1].innerHTML = "Chế độ sáng";
+          document.getElementsByTagName("h1")[1].style = "color: black";
+          document.getElementsByClassName("anh")[0].src =
+            "../images/chopug.jpg";
+          cheDo = true;
+        }
+      }
+    </script>
+  </body>
 </html>
